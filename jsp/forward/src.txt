@@ -1,0 +1,63 @@
+/* ====================================================================
+ * The Tmax soft License, Version 1.1
+ *
+ * Copyright (c) 1997-2004 The Tmax software.  
+ * All rights reserved.
+ * html code omitted for readability.
+/* ====================================================================
+
+/*
+	## forward.jsp
+*/
+
+
+
+<html>
+
+<% 
+   	double freeMem = Runtime.getRuntime().freeMemory();
+   	double totlMem = Runtime.getRuntime().totalMemory();
+   	double percent = freeMem/totlMem;
+   
+   	if (percent > 0.5) 
+   	{ 
+%>
+
+		<jsp:forward page="two.jsp"/> 
+<% 	} 
+	else 
+	{ 
+%>
+
+		<jsp:forward page="one.jsp"/>
+<% 	} %>
+
+</html>
+
+
+/*
+	## one.jsp
+*/
+
+<html>
+
+<body bgcolor="white">
+
+<p>My URL : <%= request.getRequestURI() %> </p>
+<p>VM Memory usage < 50%.
+</html>
+
+
+/*
+	## two.jsp
+*/
+
+<html>
+
+<body bgcolor="white">
+<font color="red">
+
+<p>My URL : <%= request.getRequestURI() %> </p>
+<p>VM Memory usage > 50%.</p>
+
+</html>

@@ -1,0 +1,24 @@
+/* ====================================================================
+ * The Tmax soft License, Version 1.1
+ *
+ * Copyright (c) 1997-2004 The Tmax software.  
+ * All rights reserved.
+ * html code omitted for readability.
+/* ====================================================================
+
+/*
+	## simpletag.jsp
+*/
+
+<%@ taglib prefix="jsp2" uri="/WEB-INF/tld/jsp2/jsp2-taglib.tld" %>
+<html>
+  <head>
+    <title>JSP 2.0 SimpleTag Handler</title>
+  </head>
+  <body>
+    <h1>JSP 2.0 SimpleTag Handler</h1>
+    <hr>
+    <b><u>Tag Result</u> : </b>
+    <jsp2:simpletag/>
+  </body>
+</html>

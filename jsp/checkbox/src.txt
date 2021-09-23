@@ -1,0 +1,54 @@
+/* ====================================================================
+ * The Tmax soft License, Version 1.1
+ *
+ * Copyright (c) 1997-2004 The Tmax software.  
+ * All rights reserved.
+ * html code omitted for readability.
+/* ====================================================================
+
+/*
+	## check.jsp
+*/
+
+<FORM TYPE=POST ACTION=checkresult.jsp>
+	<BR>
+		<b>Check all Favorite fruits: </b><br><br>
+	
+			<input TYPE=checkbox name=fruits VALUE=apples> Apples <BR>
+			<input TYPE=checkbox name=fruits VALUE=grapes> Grapes <BR>
+			<input TYPE=checkbox name=fruits VALUE=oranges> Oranges <BR>
+			<input TYPE=checkbox name=fruits VALUE=Coconut> Coconut <BR>
+			<br> <INPUT TYPE=submit name=submit Value="Submit">
+</FORM>
+
+
+/*
+	## checkresult.jsp
+*/
+
+
+<% 
+	String[] fruits;
+	fruits = request.getParameterValues("fruits");
+%>
+
+The checked fruits (using request object) are: <br>
+<ul>
+<%
+    if (fruits != null) 
+    {
+	  for (int i = 0; i < fruits.length; i++) 
+	  {
+%>
+		<li><%= fruits[i] %>
+<%
+	  }
+	} 
+	else 
+	{
+%>
+		no fruit selected
+<%
+	}
+%>
+</ul>

@@ -1,0 +1,23 @@
+/* ====================================================================
+ * The Tmax soft License, Version 1.1
+ *
+ * Copyright (c) 1997-2004 The Tmax software.  
+ * All rights reserved.
+ * html code omitted for readability.
+/* ====================================================================
+
+/*
+	## javabeans.jsp
+*/
+
+
+
+<jsp:useBean id="stat" class="javabeans.StatBean">
+	<jsp:setProperty name="stat" property="numbersList" 
+		value="100,250,150,50,450" />
+</jsp:useBean>
+
+
+The average of <jsp:getProperty name="stat" property="numbersList" /> is
+equal to <jsp:getProperty name="stat" property="average" />
+
